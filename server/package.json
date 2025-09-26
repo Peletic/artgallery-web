@@ -1,22 +1,32 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon --exec npx tsx ./src/index.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Peletic/artgallery-web.git"
-  },
-  "private": true,
-  "devDependencies": {
-    "@types/express": "^5.0.3",
-    "@types/node": "^24.5.2",
-    "nodemon": "^3.1.10"
-  },
-  "dependencies": {
-    "express": "^5.1.0"
-  }
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon --exec npx tsx ./src/index.ts",
+        "compile": "tsc --project tsconfig.json --outDir build",
+        "bundle": "node scripts/bundle.mjs",
+        "grab-node": "node -e \"require('fs').copyFileSync(process.execPath, 'hello.exe')\"",
+        "copy-node": "copy resources\\node /b node_executable /b",
+        "postject-win": "npx postject hello.exe NODE_SEA_BLOB dist/blob.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
+        "postject-linux": "npx postject node_executable NODE_SEA_BLOB dist/blob.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
+        "genblob": "node --experimental-sea-config sea-config.json",
+        "move-products": "move art-gallery-server dist & move art-gallery-server.exe dist & del hello.exe & del node_executable",
+        "package": "npm run grab-node && npm run copy-node && npm run genblob && npm run postject-win && npm run postject-linux && copy /b hello.exe art-gallery-server.exe && copy /b node_executable art-gallery-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Peletic/artgallery-web.git"
+    },
+    "private": true,
+    "devDependencies": {
+        "@types/express": "^5.0.3",
+        "@types/node": "^24.5.2",
+        "esbuild": "0.25.10",
+        "nodemon": "^3.1.10"
+    },
+    "dependencies": {
+        "express": "^5.1.0"
+    }
 }

@@ -34,8 +34,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-/dist/
-/build/
+package-lock.json
+
+server/resources/node
+
+dist
+build
 
 .idea
 /.idea/
