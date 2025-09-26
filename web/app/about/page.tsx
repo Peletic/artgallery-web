@@ -1,5 +1,4 @@
 import NavBar from "@/components/NavBar";
-import ArtSubmissionForm from "@/components/ArtSubmissionForm";
 
 export default function Page() {
     return (<div
@@ -8,11 +7,8 @@ export default function Page() {
             <div className={"w-full px-12 border-b-[0.5px] py-4 border-white/10 h-fit flex flex-row-reverse"}>
                 <NavBar/>
                 <h1 className={"flex flex-row gap-6 text-3xl w-full justify-start items-center"}>
-                    <a>CONTRIBUTE</a>
+                    <a>ABOUT</a>
                 </h1>
-            </div>
-            <div>
-                <ArtSubmissionForm/>
             </div>
         </main>
         <footer>
