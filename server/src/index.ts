@@ -43,5 +43,5 @@ export interface RouterConstructor {
 }
 
 app.listen(port, () => {
-    console.log(`Prepared on port ${port} (http://${"localhost:"+port}/)`)
+    console.log(`Prepared on port ${port} (http://${"localhost:" + port}/)`)
 })
