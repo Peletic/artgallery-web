@@ -40,6 +40,7 @@ server/resources/node
 
 dist
 build
+distr.zip
 
 .idea
 /.idea/
