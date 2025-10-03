@@ -1,13 +1,14 @@
 import express, {Application} from "express"
 import "@/lib/util/log";
-import "@/routes"
 import {decoratedRoutes} from "@/lib/routing";
+import "@/routes"
+import "@/lib/firebase"
+import * as firebase from "@/lib/helpers/firebase"
 
 const app = express()
 const port = 8080
 
 app.use(express.json())
-
 
 const configureRoutes = (app: Application) => {
     const router = express.Router();
